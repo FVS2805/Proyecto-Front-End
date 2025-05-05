@@ -5,15 +5,16 @@ e.preventDefault();
 
 const name=document.getElementById("name").value.trim();
 const lastName=document.getElementById("lastName").value.trim();
+const Fecha=Date.getElementById("Fecha").value.trim();
 const grade=parseFloat(document.getElementById("grade").value);
  
-if(!name || !lastName || isNaN(grade) || grade<1 || grade>7){
+if(!name || !lastName || !Fecha || isNaN(grade) || grade<1 || grade>7){
     alert("Error al ingresar datos")
     return
 }
 
 
-const student={name,lastName,grade};
+const student={name,lastName,Fecha,grade};
 
 students.push(student);
 //console.log(students)
