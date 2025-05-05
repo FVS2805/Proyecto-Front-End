@@ -1,5 +1,5 @@
 const students=[]
-
+const tableBody=document.querySelector("#studentsTable tbody")
 document.getElementById("studentForm").addEventListener("submit",function(e){
 e.preventDefault();
 
@@ -20,3 +20,12 @@ console.log(students)
 
 this.reset()
 });
+
+function addStudentToTable(student){
+    const row=document.createElement("tr");
+    row.innerHTML=`
+        <td>${student.name}</td>
+        <td>${student.lastName}</td>
+        <td>${student.grade}</td>`;
+    tableBody.appendChild(row);
+}
