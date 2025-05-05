@@ -16,7 +16,8 @@ if(!name || !lastName || isNaN(grade) || grade<1 || grade>7){
 const student={name,lastName,grade};
 
 students.push(student);
-console.log(students)
+//console.log(students)
+addStudentToTable(student)
 
 this.reset()
 });
