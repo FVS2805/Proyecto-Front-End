@@ -1,5 +1,7 @@
 const students=[]
-const tableBody=document.querySelector("#studentsTable tbody")
+const tableBody=document.querySelector("#studentsTable tbody");
+
+
 document.getElementById("studentForm").addEventListener("submit",function(e){
 e.preventDefault();
 
@@ -14,13 +16,16 @@ if(!name || !lastName || !Fecha || isNaN(grade) || grade<1 || grade>7){
 }
 
 
-const student={name,lastName,Fecha,grade};
+const student={name,lastName,Fecha,grade}
 
 students.push(student);
+
 //console.log(students)
+
 addStudentToTable(student)
 
 this.reset()
+
 });
 
 function addStudentToTable(student){
@@ -28,6 +33,7 @@ function addStudentToTable(student){
     row.innerHTML=`
         <td>${student.name}</td>
         <td>${student.lastName}</td>
-        <td>${student.grade}</td>`;
+        <td>${student.grade}</td>
+        <td>${student.Fecha}</td>`;
     tableBody.appendChild(row);
 }
