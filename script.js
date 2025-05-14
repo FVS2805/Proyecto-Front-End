@@ -31,3 +31,14 @@ document.getElementById("studentForm").addEventListener("submit",function(e){
                 <td>${student.grade}</td>`;
             tableBody.appendChild(row);
         }
+
+        function calculateAverage(){
+            if (students.length === 0) {
+                averageDiv.textContent = "Promedio General del Curso: N/A";
+                return;
+            }
+
+            const total=students.reduce((sum,student)=>sum+student.grade,0);
+            const prom=total/students.length;
+            averageDiv.textContent="Promedio General del Curso: "+prom.toFixed(2);
+        }
