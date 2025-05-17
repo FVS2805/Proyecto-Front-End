@@ -13,20 +13,19 @@
 <form id="studentForm" class="formulario">
     <div>
         <label for="name">Nombre: </label>
-        <input type="text" id="name" required>
-
+            <input type="text" id="name" required oninvalid="this.setCustomValidity('Por favor,complete el campo nombre.')" oninput="this.setCustomValidity('')">
     </div>
     <div>
         <label for="lastName">Apellido: </label>
-        <input type="text" id="lastName" required>
+        <input type="text" id="lastName" required oninvalid="this.setCustomValidity('Ingrese su Apellido')" oninput="this.setCustomValidity('')">
     </div>
     <div>
         <label for="Fecha">Fecha: </label>
-        <input type="date" id="Fecha" required>
+        <input type="text" id="Fecha" required oninvalid="this.setCustomValidity('Seleccione Fecha')" oninput="this.setCustomValidity('')">
     </div>
     <div>
         <label for="grade">Clasificación (1.0 - 7.0): </label>
-        <input type="number" id="grade" step="0.1" min="1" max="7" required>
+        <input type="number" id="grade" step="0.1" min="1" max="7" required oninvalid="this.setCustomValidity('Ingrese la Clasificacion')" oninput="this.setCustomValidity('')">
     </div>
     <button type="submit">Agregar Estudiante</button>
 </form>
