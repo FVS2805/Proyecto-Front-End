@@ -20,7 +20,6 @@ document.getElementById("studentForm").addEventListener("submit",function(e){
     addStudentToTable(student)
     this.reset()
 
-
 });
         function addStudentToTable(student){
             const row=document.createElement("tr");
