@@ -6,25 +6,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <h2>Seguimiento de Calificaciones de Estudiantes</h2>
-    <div class="promedio" id="average">Promedio de Calificaciones: No Disponible</div>
-<form id="studentForm" class="formulario">
+
+    <div class="promedio" id="average">Promedio de Calificaciones: N/A</div>
+
+    <form id="studentForm" class="formulario">
     <div>
         <label for="name">Nombre: </label>
-            <input type="text" id="name" required oninvalid="this.setCustomValidity('Por favor,complete el campo nombre.')" oninput="this.setCustomValidity('')">
+        <input type="text" id="name" required
+        oninvalid="this.setCustomValidity('Por favor,complete el campo Nombre')" oninput="this.setCustomValidity('')">
     </div>
     <div>
         <label for="lastName">Apellido: </label>
-        <input type="text" id="lastName" required oninvalid="this.setCustomValidity('Ingrese su Apellido')" oninput="this.setCustomValidity('')">
+        <input type="text" id="lastName" required 
+        oninvalid="this.setCustomValidity('Por favor,complete el campo Apellido')" oninput="this.setCustomValidity('')">
     </div>
     <div>
-        <label for="Fecha">Fecha: </label>
-        <input type="text" id="Fecha" required oninvalid="this.setCustomValidity('Seleccione Fecha')" oninput="this.setCustomValidity('')">
+        <label for="fecha">Fecha: </label>
+        <input type="date" id="fecha" required
+        oninvalid="this.setCustomValidity('Por favor,complete el campo Fecha')" oninput="this.setCustomValidity('')">
     </div>
     <div>
-        <label for="grade">Clasificación (1.0 - 7.0): </label>
-        <input type="number" id="grade" step="0.1" min="1" max="7" required oninvalid="this.setCustomValidity('Ingrese la Clasificacion')" oninput="this.setCustomValidity('')">
+        <label for="grade">Calificacion (1.0 - 7.0): </label>
+        <input type="number" id="grade" step="0.1" min="1" max="7" required
+        oninvalid="this.setCustomValidity('Por favor,complete el campo Calificacion')" oninput="this.setCustomValidity('')">
     </div>
     <button type="submit">Agregar Estudiante</button>
 </form>
@@ -35,14 +42,15 @@
             <th>Apellido</th>
             <th>Fecha</th>
             <th>Nota</th>
-
+            <th>Editar</th>
+            <th>Eliminar</th>
         </tr>
     </thead>
     <tbody>
         <!--Datos de las filas de cada alumno-->
     </tbody>
 </table>
-    <script src="script.js"></script>
-
+    <script src="script.js" ></script>
+    
 </body>
 </html>
